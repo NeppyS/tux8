@@ -23,7 +23,7 @@ export default function App() {
           <form>
             {/* Phone */}
             <div className="input-group">
-              <span className="prefix">+1</span>
+              <span className="prefix">+63</span>
               <input type="text" placeholder="Please enter your phone number" />
             </div>
 
@@ -37,7 +37,8 @@ export default function App() {
               <label>
                 <input type="checkbox" /> Remember me
               </label>
-              <a href="#">Forgot Password?</a>
+              {/* Fixed href with #0 (safe placeholder) */}
+              <a href="#0">Forgot Password?</a>
             </div>
 
             {/* Login Button */}
@@ -47,7 +48,7 @@ export default function App() {
 
             {/* Register */}
             <p className="register">
-              No Account? <a href="#">Register Now</a>
+              No Account? <a href="#0">Register Now</a>
             </p>
           </form>
         </div>
