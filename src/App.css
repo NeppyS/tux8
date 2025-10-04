@@ -5,7 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #eaf3ff 0%, #cfdfff 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #cfe4ff 50%, #007bff 100%);
   padding: 1rem;
   position: relative;
   overflow: hidden;
@@ -47,37 +47,37 @@
   50% { transform: translateY(-12px); }
 }
 
-/* Login Card */
+/* Login Card - Transparent Glass Effect */
 .login-card {
   flex: 1;
   max-width: 420px;
   width: 100%;
-  background: #fff;
-  border: 1px solid #d9e6ff;
+  background: rgba(255, 255, 255, 0.2); /* transparent */
+  border: 1px solid rgba(255, 255, 255, 0.35);
   border-radius: 18px;
   padding: 2.5rem;
-  box-shadow: 0px 10px 30px rgba(0, 123, 255, 0.15);
-  color: #222;
+  box-shadow: 0px 10px 30px rgba(0, 123, 255, 0.25);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  color: #fff; /* Make all text fully white */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .login-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0px 14px 36px rgba(0, 86, 210, 0.25);
+  box-shadow: 0px 14px 36px rgba(0, 86, 210, 0.35);
 }
 
 /* Header */
 .login-header h2 {
   font-size: 2.2rem;
   margin: 0;
-  background: linear-gradient(90deg, #007bff, #0056d2);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #000000; /* Visible on all backgrounds */
   font-weight: bold;
 }
 
 .login-header p {
-  color: #555;
+  color: #000000;
   margin-bottom: 1.8rem;
   font-size: 1rem;
 }
@@ -87,8 +87,8 @@
   display: flex;
   align-items: center;
   margin-bottom: 1.3rem;
-  background: #f9f9f9;
-  border: 1px solid #d0d8e6;
+  background: #fff; /* solid white */
+  border: 1px solid #ccc;
   border-radius: 12px;
   overflow: hidden;
   transition: border 0.3s, box-shadow 0.3s;
@@ -96,7 +96,7 @@
 
 .input-group:focus-within {
   border-color: #007bff;
-  box-shadow: 0 0 10px rgba(0, 123, 255, 0.4);
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
 }
 
 .input-group .prefix {
@@ -112,14 +112,15 @@
   padding: 0.9rem;
   border: none;
   outline: none;
-  background: transparent;
-  color: #222;
+  background: #fff; /* white background */
+  color: #222;      /* dark text for readability */
   font-size: 1rem;
 }
 
 .input-group input::placeholder {
-  color: #888;
+  color: #666; /* visible gray */
 }
+
 
 /* Options */
 .options {
@@ -128,24 +129,17 @@
   align-items: center;
   margin-bottom: 2rem;
   font-size: 0.9rem;
-  color: #666;
-}
-
-.options label {
-  display: flex;
-  align-items: center;
-  gap: 0.3rem;
+  color: #fff;
 }
 
 .options a {
-  color: #007bff;
-  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
   transition: color 0.3s;
 }
 
 .options a:hover {
-  color: #0056d2;
-  text-decoration: underline;
+  color: #d0e6ff;
 }
 
 /* Button */
@@ -165,7 +159,7 @@
 
 .login-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 22px rgba(0, 86, 210, 0.4);
+  box-shadow: 0 8px 22px rgba(0, 86, 210, 0.5);
 }
 
 /* Register */
@@ -173,19 +167,18 @@
   text-align: center;
   margin-top: 1.6rem;
   font-size: 0.95rem;
-  color: #555;
+  color: #fff;
 }
 
 .register a {
-  color: #007bff;
+  color: #fff;
   font-weight: bold;
-  text-decoration: none;
+  text-decoration: underline;
   transition: color 0.3s;
 }
 
 .register a:hover {
-  color: #0056d2;
-  text-decoration: underline;
+  color: #d0e6ff;
 }
 
 /* Responsive */
@@ -209,7 +202,7 @@
 
 @media (max-width: 500px) {
   .login-card {
-    max-width: 95%;
+    max-width: 90%;
     padding: 1.2rem;
     border-radius: 14px;
   }
@@ -224,7 +217,7 @@
   }
 
   .robot-bg {
-    max-width: 150px;
+    max-width: 140px;
   }
 
   .options {
