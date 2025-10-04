@@ -189,41 +189,67 @@
   text-decoration: underline;
 }
 
-/* Responsive */
+/* Responsive (Tablets) */
 @media (max-width: 900px) {
   .login-wrapper {
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
     text-align: center;
   }
 
   .robot-bg {
-    max-width: 220px;
-    margin-bottom: 1rem;
+    max-width: 200px;   /* smaller robot */
+    margin-bottom: 0.5rem;
   }
 
   .login-card {
-    max-width: 100%;
-    padding: 2rem;
+    max-width: 92%;
+    padding: 1.8rem;
   }
 }
 
+/* Responsive (Small Phones) */
 @media (max-width: 500px) {
   .login-card {
-    padding: 1.5rem;
+    max-width: 95%;
+    padding: 1.2rem;
+    border-radius: 14px;
   }
 
   .login-header h2 {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
+  }
+
+  .login-header p {
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+  }
+
+  .input-group input {
+    font-size: 0.9rem;
+    padding: 0.7rem;
+  }
+
+  .login-btn {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .robot-bg {
+    max-width: 160px;   /* smaller robot for phones */
   }
 
   .options {
     flex-direction: column;
-    gap: 0.8rem;
+    gap: 0.6rem;
     align-items: flex-start;
   }
 
   .options a {
     align-self: flex-end;
+  }
+
+  .register {
+    font-size: 0.85rem;
   }
 }
