@@ -5,7 +5,7 @@ import robotImg from "./robot.png"; // 👈 robot image inside src
 export default function App() {
   return (
     <div className="login-container">
-      {/* Wrapper keeps robot + login card centered together */}
+      {/* Wrapper keeps robot + login card aligned */}
       <div className="login-wrapper">
         
         {/* Robot beside Login Card */}
@@ -37,7 +37,6 @@ export default function App() {
               <label>
                 <input type="checkbox" /> Remember me
               </label>
-              {/* Fixed href with #0 (safe placeholder) */}
               <a href="#0">Forgot Password?</a>
             </div>
 

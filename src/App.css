@@ -5,7 +5,7 @@
   display: flex;
   justify-content: center;   /* horizontal center */
   align-items: center;       /* vertical center */
-  background: radial-gradient(circle at top, #111 0%, #000 100%);
+  background: radial-gradient(circle at top, #141414 0%, #000 100%);
   padding: 1rem;
   position: relative;
   overflow: hidden;
@@ -14,14 +14,13 @@
 /* Wrapper (robot + login) */
 .login-wrapper {
   display: flex;
-  justify-content: center;   /* center items inside */
+  justify-content: center;
   align-items: center;
   gap: 3rem;
-  flex-wrap: nowrap;         /* prevent odd wrapping on desktop */
-  max-width: 1000px;         /* keeps it centered instead of stretching */
+  max-width: 1100px;
   width: 100%;
+  flex-wrap: nowrap;
 }
-
 
 /* Robot */
 .robot-wrapper {
@@ -32,10 +31,10 @@
 }
 
 .robot-bg {
-  max-width: 360px;
+  max-width: 340px;
   width: 100%;
   animation: float 3s ease-in-out infinite;
-  filter: drop-shadow(0px 0px 25px rgba(255, 165, 0, 0.8));
+  filter: drop-shadow(0px 0px 20px rgba(255, 165, 0, 0.7));
   transition: transform 0.4s ease;
 }
 
@@ -45,7 +44,7 @@
 
 @keyframes float {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-15px); }
+  50% { transform: translateY(-12px); }
 }
 
 /* Login Card */
@@ -55,18 +54,17 @@
   width: 100%;
   background: rgba(20, 20, 20, 0.85);
   border: 1px solid rgba(255, 165, 0, 0.5);
-  border-radius: 20px;
+  border-radius: 18px;
   padding: 2.5rem;
-  box-shadow: 0px 12px 35px rgba(255, 165, 0, 0.35);
-  backdrop-filter: blur(15px);
+  box-shadow: 0px 10px 30px rgba(255, 165, 0, 0.3);
+  backdrop-filter: blur(12px);
   color: #fff;
-  transform: translateY(0);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .login-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 16px 40px rgba(255, 120, 0, 0.5);
+  transform: translateY(-4px);
+  box-shadow: 0px 14px 36px rgba(255, 120, 0, 0.5);
 }
 
 /* Header */
@@ -81,16 +79,15 @@
 
 .login-header p {
   color: #bbb;
-  margin-bottom: 2rem;
+  margin-bottom: 1.8rem;
   font-size: 1rem;
-  letter-spacing: 0.5px;
 }
 
 /* Inputs */
 .input-group {
   display: flex;
   align-items: center;
-  margin-bottom: 1.4rem;
+  margin-bottom: 1.3rem;
   background: #111;
   border: 1px solid #333;
   border-radius: 12px;
@@ -168,14 +165,14 @@
 }
 
 .login-btn:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
   box-shadow: 0 8px 22px rgba(255, 120, 0, 0.65);
 }
 
 /* Register */
 .register {
   text-align: center;
-  margin-top: 1.8rem;
+  margin-top: 1.6rem;
   font-size: 0.95rem;
   color: #aaa;
 }
@@ -197,10 +194,11 @@
   .login-wrapper {
     flex-direction: column;
     gap: 2rem;
+    text-align: center;
   }
 
   .robot-bg {
-    max-width: 240px;
+    max-width: 220px;
     margin-bottom: 1rem;
   }
 
@@ -216,6 +214,16 @@
   }
 
   .login-header h2 {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
+  }
+
+  .options {
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: flex-start;
+  }
+
+  .options a {
+    align-self: flex-end;
   }
 }
